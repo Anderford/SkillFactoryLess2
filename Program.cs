@@ -1,9 +1,8 @@
 ﻿using System;
-
-//IfElse();
-//ArraySearch();
-//ForEachFun();
-//ForEachFunLvlTWo();
+IfElse();
+ArraySearch();
+ForEachFun();
+ForEachFunLvlTWo();
 MultidimensionalArray();
 
 static void IfElse()
@@ -191,7 +190,7 @@ static void ForEachFunLvlTWo()
 
 static void MultidimensionalArray()
 {
-    /*int[,] array = { { 1, 2, 3 }, { 5, 6, 7 } };
+    int[,] array = { { 1, 2, 3 }, { 5, 6, 7 } };
     foreach(var a in array)
     {
         Console.Write(a);
@@ -250,7 +249,7 @@ static void MultidimensionalArray()
         {
             Console.Write(item + " ");
         }
-    }*/
+    }
 
     int[,] Bigarr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
 
@@ -260,6 +259,25 @@ static void MultidimensionalArray()
         {
             Console.Write(num);
         }
+    }
+
+    int[,] Superarr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+    int stemp;
+    for (int i = 0; i <= Superarr.GetUpperBound(0); i++)
+    {
+        for (int j = 0; j <= Superarr.GetUpperBound(1); j++)
+            for (int k = j + 1; k <= Superarr.GetUpperBound(1); k++)
+                if (Superarr[i, j] > (Superarr[i, k]))
+                {
+                    stemp = Superarr[i, k];
+                    Superarr[i,k] = Superarr[i,j];
+                    Superarr[i,j] = stemp;
+                }
+    }
+
+    foreach(var item in Superarr)
+    {
+        Console.Write(item);
     }
 }
 
