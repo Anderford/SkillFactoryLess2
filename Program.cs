@@ -1,9 +1,10 @@
 ﻿using System;
 
-IfElse();
-ArraySearch();
-ForEachFun();
-ForEachFunLvlTWo();
+//IfElse();
+//ArraySearch();
+//ForEachFun();
+//ForEachFunLvlTWo();
+MultidimensionalArray();
 
 static void IfElse()
 {
@@ -186,5 +187,72 @@ static void ForEachFunLvlTWo()
         Console.Write(name[i] + "");
     }
 }
-    
+
+
+static void MultidimensionalArray()
+{
+    int[,] array = { { 1, 2, 3 }, { 5, 6, 7 } };
+    foreach(var a in array)
+    {
+        Console.Write(a);
+    }
+
+    int[,] Array = { { 1, 2, 3 }, { 5, 6, 7 }, { 8, 9, 10 }, { 11, 12, 13 } };
+
+    for (int i = 0; i < Array.GetUpperBound(1) + 1; i++)
+    {
+        for (int k = 0; k < Array.GetUpperBound(0) + 1; k++)
+            Console.Write(Array[k, i] + " ");
+
+        Console.WriteLine();
+    }
+
+
+    var arr = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+    int temp = 0;
+    for (int i = 0; i < arr.Length; i++)
+    {
+        for(int j = 0; j < arr.Length - 1; j++)
+        {
+            if (arr[i] < arr[j])
+            {
+                temp = arr[i];
+                arr[i] = arr[j];
+                arr[j] = temp;
+            }
+        }
+    }
+    foreach (var item in arr)
+    {
+        Console.Write(item);
+    }
+
+    int[][] rray = new int[3][];
+
+    rray[0] = new int[2] { 1, 2 };
+    rray[1] = new int[3] { 1, 2, 3 };
+    rray[2] = new int[5] { 1, 2, 3, 4, 5 };
+
+    foreach (var num in rray)
+    {
+        foreach (var item in num)
+        {
+            Console.Write(item + " ");
+        }
+    }
+
+
+    var Tarray = new int[] { 5, 6, 9, 1, 2, 3, 4 };
+
+    foreach(var item in Tarray)
+    {
+        if(item % 2 == 0)
+        {
+            Console.Write(item + " ");
+        }
+    }
+}
+
+
+
 
