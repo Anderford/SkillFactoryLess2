@@ -191,7 +191,7 @@ static void ForEachFunLvlTWo()
 
 static void MultidimensionalArray()
 {
-    int[,] array = { { 1, 2, 3 }, { 5, 6, 7 } };
+    /*int[,] array = { { 1, 2, 3 }, { 5, 6, 7 } };
     foreach(var a in array)
     {
         Console.Write(a);
@@ -249,6 +249,16 @@ static void MultidimensionalArray()
         if(item % 2 == 0)
         {
             Console.Write(item + " ");
+        }
+    }*/
+
+    int[,] Bigarr = { { -5, 6, 9, 1, 2, -3 }, { -8, 8, 1, 1, 2, -3 } };
+
+    foreach (var num in Bigarr)
+    {
+        if(num > 0)
+        {
+            Console.Write(num);
         }
     }
 }
