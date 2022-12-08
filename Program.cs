@@ -4,8 +4,8 @@
     {
     static void Main(string[] args)
     {
-        IfElse();
-
+        //IfElse();
+        ArraySearch();
 
         static void IfElse()
         {
@@ -33,7 +33,7 @@
 
             Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
 
-            var color = Console.ReadLine();
+           
 
             /*if (color == "red")
             {
@@ -54,30 +54,115 @@
                 Console.ForegroundColor = ConsoleColor.Black;
                 Console.WriteLine("Your color is cyan!");
             }*/
+            int i = 0;
 
-
-            switch (color)
+            for (; i < 5;)
             {
-                case "yellow":
-                    Console.BackgroundColor = ConsoleColor.Yellow;
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    break;
+                var color = Console.ReadLine();
+                Console.WriteLine($"Iteration {i}");
+                switch (color)
+                {
+                    case "yellow":
+                        Console.BackgroundColor = ConsoleColor.Yellow;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        break;
 
-                case "blue":
-                    Console.BackgroundColor = ConsoleColor.Blue;
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    break;
+                    case "blue":
+                        Console.BackgroundColor = ConsoleColor.Blue;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        break;
 
-                case "red":
-                    Console.BackgroundColor = ConsoleColor.Red;
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    break;
+                    case "red":
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        break;
 
-                default: 
-                    Console.BackgroundColor = ConsoleColor.Cyan;
-                    Console.ForegroundColor = ConsoleColor.Black;
-                    break;
+                    default:
+                        Console.BackgroundColor = ConsoleColor.Cyan;
+                        Console.ForegroundColor = ConsoleColor.Black;
+                        break;
+                       
+                }
+                i++;
             }
+
+            int k = 0;
+
+            while (k < 5)
+            {
+                Console.WriteLine(k);
+                k++;
+            }
+
+
+            int t = 0;
+
+            do
+            {
+                Console.WriteLine(t);
+
+                Console.WriteLine("Напишите свой любимый цвет на английском с маленькой буквы");
+                switch (Console.ReadLine())
+                {
+                    case "red":
+                        Console.BackgroundColor = ConsoleColor.Red;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Your color is red!");
+                        break;
+
+                    case "green":
+                        Console.BackgroundColor = ConsoleColor.Green;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Your color is green!");
+                        break;
+                    case "cyan":
+                        Console.BackgroundColor = ConsoleColor.Cyan;
+                        Console.ForegroundColor = ConsoleColor.Black;
+
+                        Console.WriteLine("Your color is cyan!");
+                        break;
+                    default:
+                        Console.BackgroundColor = ConsoleColor.Yellow;
+                        Console.ForegroundColor = ConsoleColor.Red;
+
+                        Console.WriteLine("Your color is yellow!");
+                        break;
+                }
+
+                t++;
+            } while (t < 3);
+        }
+
+        static void ArraySearch()
+        {
+            var MyArray = new int[] { 31, 52, 43, 44, 25, 56};
+            int MinValue = 100000, MaxValue = 0, maxIndex = 0,
+            minIndex = 1;
+
+            for(int i = 0; i < MyArray.Length; i++)
+            {
+                if(MyArray[i] < MinValue)
+                {
+                    MinValue = MyArray[i];
+                    minIndex = i;
+                }
+            }
+
+            for(int i = 0; i < MyArray.Length; i++)
+            {
+                if (MyArray[i] > MaxValue)
+                {
+                    MaxValue = MyArray[i];
+                    maxIndex = i;
+                }
+            }
+
+            Console.WriteLine($"Наименьший элемент массива {MinValue}, его индекс {minIndex}");
+            Console.WriteLine($"Наибольший элемент массива {MaxValue}, его индекс {maxIndex}");
         }
     }
 }
+    
+
