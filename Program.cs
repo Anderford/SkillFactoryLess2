@@ -6,6 +6,8 @@
     {
         //IfElse();
         ArraySearch();
+        ForEachFun();
+        ForEachFunLvlTWo();
 
         static void IfElse()
         {
@@ -161,6 +163,33 @@
 
             Console.WriteLine($"Наименьший элемент массива {MinValue}, его индекс {minIndex}");
             Console.WriteLine($"Наибольший элемент массива {MaxValue}, его индекс {maxIndex}");
+        }
+
+
+        static void ForEachFun()
+        {
+            Console.WriteLine("Ваше имя");
+            string name = Console.ReadLine();
+            Console.WriteLine(name);
+            Console.WriteLine("Ваше имя по буквам:");
+            foreach(var s in name)
+            {
+                Console.Write(s + " ");
+            }
+                Console.WriteLine($"Последняя буква {name[name.Length - 1]}");
+        }
+
+
+        static void ForEachFunLvlTWo()
+        {
+            Console.WriteLine("Ваше имя");
+            string name = Console.ReadLine();
+
+            var temp = "";
+            for(int i = name.Length - 1; i >= 0; i--)
+            {
+                Console.Write(name[i] + "");
+            }
         }
     }
 }
