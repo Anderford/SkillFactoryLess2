@@ -1,9 +1,9 @@
 ﻿using System;
-//IfElse();
-//ArraySearch();
-//ForEachFun();
-//ForEachFunLvlTWo();
-//MultidimensionalArray();
+IfElse();
+ArraySearch();
+ForEachFun();
+ForEachFunLvlTWo();
+MultidimensionalArray();
 ArrayTest();
 static void IfElse()
 {
@@ -286,7 +286,7 @@ static void ArrayTest()
 {
 
 
-    (string name, string[] dishes) User;
+    (string? name, string?[] dishes) User;
 
     Console.WriteLine("Your name:");
     User.name = Console.ReadLine();
