@@ -1,10 +1,10 @@
 ﻿using System;
-IfElse();
-ArraySearch();
-ForEachFun();
-ForEachFunLvlTWo();
-MultidimensionalArray();
-
+//IfElse();
+//ArraySearch();
+//ForEachFun();
+//ForEachFunLvlTWo();
+//MultidimensionalArray();
+ArrayTest();
 static void IfElse()
 {
     string a = "a";
@@ -282,5 +282,25 @@ static void MultidimensionalArray()
 }
 
 
+static void ArrayTest()
+{
 
 
+    (string name, string[] dishes) User;
+
+    Console.WriteLine("Your name:");
+    User.name = Console.ReadLine();
+    User.dishes = new string[5];
+    Console.WriteLine("Your favorite dishes (5 dishes):");
+
+    for (int i = 0; i < 5; i++)
+    {
+        Console.WriteLine($"You favorit dishes {i + 1}");
+        User.dishes[i] = Console.ReadLine();
+       
+    }
+
+    Console.WriteLine($"You name {User.name}, yor favorite dishes: {string.Join(" ,", User.dishes)}");
+
+
+}
